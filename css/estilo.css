@@ -1,0 +1,288 @@
+/*Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif; }
+
+/*Variables*/
+/*Imports*/
+.cards {
+  margin: 6rem 5rem;
+  display: flex;
+  justify-content: center; }
+  .cards div {
+    padding: 1rem;
+    margin: 0 1rem;
+    text-align: center; }
+    .cards div h3 {
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 2rem; }
+    .cards div p {
+      font-size: 20px; }
+  .cards .card1, .cards .card2, .cards .card3 {
+    max-width: 285px;
+    background-color: lightgray;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; }
+
+.servicios {
+  margin: 1rem; }
+  .servicios ul {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none; }
+    .servicios ul li {
+      margin: 1rem 0;
+      text-align: center;
+      font-size: 30px;
+      font-weight: 700; }
+      .servicios ul li p {
+        font-size: 20px;
+        font-weight: 400; }
+
+.shop {
+  margin: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; }
+  .shop div {
+    margin: 1rem;
+    width: 20%; }
+    .shop div img {
+      width: 100%; }
+    .shop div p {
+      font-weight: 700;
+      font-size: 20px; }
+    .shop div .precio {
+      color: hwb(4 21% 4%);
+      margin: .5rem .5rem .5rem 0; }
+    .shop div button {
+      margin-top: 1rem;
+      width: 100%;
+      height: 40px;
+      font-size: 20px;
+      color: #111144;
+      background-color: hwb(4 21% 4%);
+      border-radius: 5px;
+      border: lightgray;
+      cursor: pointer; }
+      .shop div button:hover {
+        border: 2px solid black; }
+
+.hero_contactos main .hero_text .instagram, .hero_contactos main .hero_text .whatsapp {
+  font-size: 30px;
+  margin: 1rem; }
+  .hero_contactos main .hero_text .instagram span:hover, .hero_contactos main .hero_text .whatsapp span:hover {
+    cursor: pointer;
+    color: hwb(4 21% 4%); }
+
+.ubicacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: lightgray;
+  margin: 3rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  text-align: center; }
+  .ubicacion h2 {
+    padding: 1rem;
+    font-size: 30px; }
+  .ubicacion p {
+    padding: .5rem;
+    font-size: 20px; }
+  .ubicacion iframe {
+    width: 90%;
+    height: 250px;
+    margin: 1rem; }
+
+.containerFormulario {
+  background-color: lightgray;
+  margin: 3rem; }
+  .containerFormulario h2 {
+    text-align: center;
+    padding: 1rem;
+    font-size: 30px; }
+  .containerFormulario .formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .containerFormulario .formulario input, .containerFormulario .formulario textarea {
+      width: 90%;
+      padding: 1rem;
+      margin: .5rem;
+      background-color: beige;
+      border: none; }
+    .containerFormulario .formulario button {
+      padding: 15px;
+      margin: 2rem 0;
+      width: 100px;
+      background-color: hwb(4 21% 4%);
+      border: 2px solid #114;
+      transition: 0.2s;
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: 700; }
+      .containerFormulario .formulario button:hover {
+        border: 2px solid hwb(4 21% 4%); }
+
+/*Mixin*/
+/*-----Contenido principal-------*/
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../img/Background-5.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative; }
+  .hero header {
+    display: flex;
+    align-items: center; }
+    .hero header div a img {
+      height: 75px;
+      margin: 2rem;
+      border-radius: 50%; }
+    .hero header .navlinks {
+      margin: 2rem 2rem 2rem auto; }
+      .hero header .navlinks ul {
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center; }
+        .hero header .navlinks ul li {
+          margin: 0 .5rem; }
+          .hero header .navlinks ul li a {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: white;
+            font-size: 25px;
+            font-weight: 700; }
+            .hero header .navlinks ul li a:hover {
+              text-decoration: underline hwb(4 21% 4%); }
+  .hero main {
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    text-align: center; }
+    .hero main h1 {
+      font-size: 50px;
+      margin-bottom: 3rem; }
+    .hero main p {
+      font-size: 30px;
+      margin: 0 3rem; }
+    .hero main button {
+      padding: 15px;
+      margin-top: 2rem;
+      background-color: hwb(4 21% 4%);
+      border: 2px solid #114;
+      transition: 0.2s; }
+      .hero main button:hover {
+        border: 2px solid hwb(4 21% 4%); }
+      .hero main button a {
+        font-size: 30px;
+        color: #114;
+        text-decoration: none;
+        text-transform: capitalize;
+        font-weight: 700; }
+    .hero main img {
+      height: 150px;
+      margin-top: 2rem; }
+
+/*---------footer---------*/
+footer {
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  footer .icons {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center; }
+    footer .icons div {
+      margin: 0 2rem; }
+      footer .icons div img {
+        width: 60px;
+        height: 60px; }
+  footer h3 {
+    font-size: 30px;
+    margin: 15px 0; }
+  footer p {
+    font-size: 20px;
+    text-align: center;
+    margin: 1rem 0.5rem; }
+
+/*---------media querys--------*/
+@media screen and (max-width: 1000px) {
+  .cards {
+    flex-direction: column; }
+    .cards .card1, .cards .card2, .cards .card3 {
+      margin-bottom: 1rem; }
+      .cards .card1 p, .cards .card2 p, .cards .card3 p {
+        font-size: 25px;
+        padding: 1rem; } }
+
+@media screen and (max-width: 950px) {
+  .hero header .navlinks ul li a {
+    font-size: 23px; } }
+
+@media screen and (max-width: 904px) {
+  .shop div {
+    width: 30%; } }
+
+@media screen and (max-width: 835px) {
+  .hero main {
+    top: 60%; }
+    .hero main .hero_text h1 {
+      font-size: 35px; }
+    .hero main .hero_text p {
+      font-size: 25px; }
+    .hero main .hero_text button a {
+      font-size: 25px; } }
+
+@media screen and (max-width: 769px) {
+  .hero header .navlinks {
+    margin: 0; }
+  .cards {
+    margin: 4rem 1rem; }
+    .cards .card1 h3, .cards .card2 h3, .cards .card3 h3 {
+      font-size: 20px; }
+    .cards .card1 p, .cards .card2 p, .cards .card3 p {
+      font-size: 17px; }
+  footer .icons div {
+    margin: 0 1rem; }
+  footer h3 {
+    font-size: 25px; } }
+
+@media screen and (max-width: 613px) {
+  .shop div {
+    width: 65%; } }
+
+@media screen and (max-width: 590px) {
+  .hero main .hero_text h1 {
+    font-size: 35px;
+    margin-bottom: 2rem; }
+  .hero main .hero_text p {
+    font-size: 25px; }
+  .hero main .hero_text button a {
+    font-size: 20px; } }
+
+@media screen and (max-width: 440px) {
+  .hero main .hero_text h1 {
+    margin-bottom: 1.5rem; }
+  .hero main .hero_text p {
+    margin: 0 1rem; }
+  .hero main .hero_text button {
+    margin-top: 1rem; }
+    .hero main .hero_text button a {
+      font-size: 20px; }
+  .hero main .hero_text img {
+    height: 115px; }
+  .servicios ul {
+    margin: .5rem; } }
