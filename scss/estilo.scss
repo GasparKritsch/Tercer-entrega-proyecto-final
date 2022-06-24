@@ -12,6 +12,7 @@
 $grisclaro: rgb(211, 211, 211);
 $azul: rgb(17, 17, 68);
 $Naranja: hwb(4 21% 4%);
+$light: #ffff;
 
 /*Imports*/
 
@@ -19,93 +20,7 @@ $Naranja: hwb(4 21% 4%);
 @import "servicios.scss";
 @import "shop.scss";
 @import "contactos.scss";
-
-/*-----Contenido principal-------*/
-
-.hero{
-    width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../img/Background-5.jpg);
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    header{
-        display: flex;
-        align-items: center;
-        div{
-            a{
-                img{
-                    height: 75px;
-                    margin: 2rem;
-                    border-radius: 50%;
-                }
-            }
-        }
-        .navlinks{
-            margin: 2rem 2rem 2rem auto;
-            ul{
-                list-style-type: none;
-                display: flex;
-                flex-wrap: wrap;
-                align-items: center;
-                li{
-                    margin: 0 .5rem;
-                    a{
-                        text-decoration: none;
-                        text-transform: uppercase;
-                        color: white;
-                        font-size: 25px;
-                        font-weight: 700;
-                        
-                        &:hover{
-                            text-decoration:underline $Naranja;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    main{
-        width: 90%;
-        color: white;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        h1{
-            font-size: 50px;
-            margin-bottom: 3rem;
-        }
-        p{
-            font-size: 30px;
-            margin:0 3rem;
-        }
-        button{
-            padding: 15px;
-            margin-top: 2rem;
-            background-color: $Naranja;
-            border: 2px solid #114; 
-            transition: 0.2s;
-            &:hover{
-                border: 2px solid $Naranja;
-            }
-            a{
-                font-size: 30px;
-                color: #114;
-                text-decoration: none;
-                text-transform: capitalize;
-                font-weight: 700;
-            }
-        }
-        img{
-            height: 150px;
-            margin-top: 2rem;
-        }
-    }
-}
+@import "gallery.scss";
 
 /*---------footer---------*/
 
@@ -128,44 +43,145 @@ footer{
     }
     h3{
         font-size: 30px;
+        font-weight: 700;
         margin: 15px 0;
     }
     p{
         font-size: 20px;
         text-align: center;
+        font-weight: 400;
         margin: 1rem 0.5rem;
     }
 }
 
 /*---------media querys--------*/
 
+@media screen and (min-width:1440px){
+    .hero, .heroServicios, .heroBlog, .heroContactos, .heroShop{
+        main{
+            margin-top: 5rem;
+            .hero_text{
+                margin: 1rem 1rem;
+                h1{
+                    font-size: 5rem;
+                    margin-bottom: 2rem;
+                }
+                p{
+                    font-size: 3rem;
+                    margin: 0 2rem;
+                }
+                button{
+                    font-size: 3rem;
+                }
+            }
+        }   
+    }
+    .blogContent{
+        h2{
+            font-size: 2.5rem;
+        }
+    }
+    .shop{
+        div{
+            .precio{
+                font-size: 35px;
+            }
+            .descripcion{
+                font-size: 35px;
+            }
+            p{
+                font-size: 35px;
+            }
+            button{
+                height: 60px;
+            }
+        }
+    }
+    .servicios{
+        ul{
+            li{
+                font-size: 40px;
+                p{
+                    font-size: 30px;
+                }
+            }
+        }  
+    }
+    .cards{
+        div{
+            h3{
+                font-size: 3rem;
+            }
+            p{
+                font-size: 2rem;
+            }
+        }
+    }
+    footer{
+        .icons{
+            div{
+                margin: 0 1rem;
+                img {
+                width: 75px;
+                height: 75px;
+            }
+        }
+        h3{
+            font-size: 35px;
+        }
+        p{
+            font-size: 30px;
+        }
+    }
+}   
+
+}
+
+@media screen and(max-width: 1120px){
+    .mainContainer{
+        margin-top: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .galleryText{
+            width: 30%;
+            text-align: center;
+            h1{
+                color: white;
+                font-size: 5rem;
+            }
+        }
+        .carouselContainer{
+            width: 55%;
+        }
+    }
+}
+
 @media screen and(max-width: 1000px){
     .cards{
         flex-direction: column;
         .card1, .card2, .card3{
             margin-bottom: 1rem;
+            max-width: 100%;
             p{
                 font-size: 25px;
                 padding: 1rem;
             }
         }
     }
-}
-
-@media screen and(max-width: 950px){
-    .hero{
-        header{
-            .navlinks{
-                ul{
-                    li{
-                        a{
-                            font-size: 23px;
-                        }
-                    }
-                }    
-            }
+    .blogContent{
+        #carouselR32,#carouselR, #carouselC63{
+            margin: 5vh 5vw;
         }
     }
+}
+
+@media screen and(max-width: 992px){
+    .hero, .heroServicios, .heroBlog, .heroContactos, .heroShop{
+        main{
+            margin-top: 3rem;
+        }
+    }    
 }
 
 @media screen and(max-width: 904px){
@@ -176,43 +192,15 @@ footer{
     }
 }
 
-@media screen and(max-width: 835px){
-    .hero{
-        main{
-            top: 60%;
-            .hero_text{
-                h1{
-                    font-size: 35px ;
-                }
-                p{
-                    font-size: 25px;
-                }
-                button{
-                    a{
-                        font-size: 25px;
-                    }
-                }
-            }
-        }
-    }
-}
-
 @media screen and(max-width: 769px){
-    .hero{
-        header{
-            .navlinks{
-                margin: 0;
-            }
-        }
-    }
     .cards{
         margin: 4rem 1rem;
         .card1, .card2, .card3{
             h3{
-                font-size: 20px;
+                font-size: 1.5rem;
             }
             p{
-                font-size: 17px;
+                font-size:1.2rem;
             }
         }
     }
@@ -229,6 +217,24 @@ footer{
 }
 
 @media screen and (max-width: 613px){
+    .hero, .heroServicios, .heroBlog, .heroContactos, .heroShop{
+        main{
+            margin-top: 2rem;
+            .hero_text{
+                h1{
+                    font-size: 2rem;
+                    margin-bottom: .5rem;
+                }
+                p{
+                    font-size: 1.5rem;
+                    margin: 0 2rem;
+                }
+                .dealer{
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
     .shop{
         div{
             width: 65%;
@@ -236,52 +242,33 @@ footer{
     }
 }
 
-@media screen and(max-width: 590px){
-    .hero{
+@media screen and (max-width:500px){
+    .hero, .heroServicios, .heroShop{
         main{
+            margin-top: 0;
             .hero_text{
-                h1{
-                    font-size: 35px;
-                    margin-bottom: 2rem;
-                }
-                p{
-                    font-size: 25px
-                }
                 button{
-                    a{
-                        font-size: 20px;
-                    }
+                    margin-top: 0.4rem;
                 }
             }
         }
     }
-}
-
-@media screen and(max-width: 440px){
-    .hero{
+    .heroBlog, .heroContactos{
         main{
+            margin-top: 4rem;
             .hero_text{
-                h1{
-                    margin-bottom: 1.5rem;
-                }
-                p{
-                    margin:0 1rem;
-                }
                 button{
                     margin-top: 1rem;
-                    a{
-                        font-size: 20px;
-                    }
-                }
-                img{
-                    height: 115px;
                 }
             }
         }
     }
-    .servicios{
-        ul{
-            margin: .5rem;
+    .blogContent{
+        h2{
+            font-size: 1.5rem;
         }
+    }
+    .ubicacion, .containerFormulario{
+        margin: 1rem;
     }
 }

@@ -7,24 +7,107 @@
 
 /*Variables*/
 /*Imports*/
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.8), rgba(4, 9, 30, 0.8)), url(../img/Background-5.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative; }
+  .hero main {
+    color: white; }
+    .hero main .hero_text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      align-items: center; }
+      .hero main .hero_text h1 {
+        margin: 0rem 2rem;
+        font-size: 3rem;
+        font-weight: 700; }
+      .hero main .hero_text p {
+        font-size: 1.5rem;
+        margin: 0 3rem;
+        font-weight: 400; }
+      .hero main .hero_text button {
+        font-size: 1.5rem;
+        font-weight: 700;
+        padding: 15px;
+        margin-top: 2rem;
+        background-color: hwb(4 21% 4%);
+        border: 2px solid #114;
+        transition: 0.2s; }
+        .hero main .hero_text button:hover {
+          border: 2px solid hwb(4 21% 4%); }
+        .hero main .hero_text button a {
+          color: #114;
+          text-decoration: none;
+          text-transform: capitalize; }
+      .hero main .hero_text img {
+        height: 7rem;
+        margin-top: 2rem; }
+
 .cards {
   margin: 6rem 5rem;
   display: flex;
-  justify-content: center; }
+  justify-content: space-evenly; }
   .cards div {
     padding: 1rem;
-    margin: 0 1rem;
+    margin: 2rem 1rem;
     text-align: center; }
     .cards div h3 {
-      font-size: 30px;
+      margin-top: 5px;
+      font-size: 1.5rem;
       font-weight: 700;
-      margin-bottom: 2rem; }
+      margin-bottom: 1rem; }
     .cards div p {
-      font-size: 20px; }
+      font-size: 1,5rem; }
   .cards .card1, .cards .card2, .cards .card3 {
-    max-width: 285px;
+    max-width: 25%;
     background-color: lightgray;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; }
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px; }
+
+.heroServicios {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.8), rgba(4, 9, 30, 0.8)), url(../img/Background-3.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative; }
+  .heroServicios main {
+    color: white; }
+    .heroServicios main .hero_text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      align-items: center; }
+      .heroServicios main .hero_text h1 {
+        font-size: 3rem;
+        margin-bottom: 3rem;
+        font-weight: 700; }
+      .heroServicios main .hero_text p {
+        font-size: 1.5rem;
+        margin: 0 3rem;
+        font-weight: 400; }
+      .heroServicios main .hero_text button {
+        font-size: 1.5rem;
+        font-weight: 700;
+        padding: 15px;
+        margin-top: 2rem;
+        background-color: hwb(4 21% 4%);
+        border: 2px solid #114;
+        transition: 0.2s; }
+        .heroServicios main .hero_text button:hover {
+          border: 2px solid hwb(4 21% 4%); }
+        .heroServicios main .hero_text button a {
+          color: #114;
+          text-decoration: none;
+          text-transform: capitalize; }
+      .heroServicios main .hero_text img {
+        height: 7rem;
+        margin-top: 2rem; }
 
 .servicios {
   margin: 1rem; }
@@ -42,6 +125,36 @@
       .servicios ul li p {
         font-size: 20px;
         font-weight: 400; }
+
+.heroShop {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.8), rgba(4, 9, 30, 0.8)), url(../img/Background-2.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative; }
+  .heroShop main {
+    color: white; }
+    .heroShop main .hero_text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      align-items: center; }
+      .heroShop main .hero_text h1 {
+        font-size: 3rem;
+        margin-bottom: 3rem;
+        font-weight: 700; }
+      .heroShop main .hero_text p {
+        font-size: 1.5rem;
+        margin: 0 3rem;
+        font-weight: 400; }
+      .heroShop main .hero_text .dealer {
+        margin-top: 1rem;
+        font-weight: 400; }
+      .heroShop main .hero_text img {
+        height: 7rem;
+        margin-top: 2rem; }
 
 .shop {
   margin: 2rem 0;
@@ -63,23 +176,58 @@
       margin-top: 1rem;
       width: 100%;
       height: 40px;
+      font-weight: 400;
       font-size: 20px;
       color: #111144;
       background-color: hwb(4 21% 4%);
-      border-radius: 5px;
-      border: lightgray;
+      border: none;
+      padding-top: 4px;
       cursor: pointer; }
       .shop div button:hover {
         border: 2px solid black; }
 
-.hero_contactos main .hero_text .instagram, .hero_contactos main .hero_text .whatsapp {
-  font-size: 30px;
-  margin: 1rem; }
-  .hero_contactos main .hero_text .instagram span:hover, .hero_contactos main .hero_text .whatsapp span:hover {
-    cursor: pointer;
-    color: hwb(4 21% 4%); }
+.heroContactos {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.9), rgba(4, 9, 30, 0.9)), url(../img/Background-4.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative; }
+  .heroContactos main {
+    color: white; }
+    .heroContactos main .hero_text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      align-items: center; }
+      .heroContactos main .hero_text h1 {
+        font-size: 3rem;
+        margin-bottom: 3rem;
+        font-weight: 700; }
+      .heroContactos main .hero_text p {
+        font-size: 1.5rem;
+        margin: 0 3rem;
+        font-weight: 400; }
+      .heroContactos main .hero_text button {
+        font-size: 1.5rem;
+        padding: 15px;
+        margin-top: 2rem;
+        background-color: hwb(4 21% 4%);
+        border: 2px solid #114;
+        transition: 0.2s; }
+        .heroContactos main .hero_text button:hover {
+          border: 2px solid hwb(4 21% 4%); }
+        .heroContactos main .hero_text button a {
+          color: #114;
+          text-decoration: none;
+          text-transform: capitalize; }
+      .heroContactos main .hero_text img {
+        height: 7rem;
+        margin-top: 2rem; }
 
 .ubicacion {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -99,6 +247,7 @@
     margin: 1rem; }
 
 .containerFormulario {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
   background-color: lightgray;
   margin: 3rem; }
   .containerFormulario h2 {
@@ -128,72 +277,38 @@
       .containerFormulario .formulario button:hover {
         border: 2px solid hwb(4 21% 4%); }
 
-/*Mixin*/
-/*-----Contenido principal-------*/
-.hero {
+.heroBlog {
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../img/Background-5.jpg);
+  background-image: linear-gradient(rgba(4, 9, 30, 0.8), rgba(4, 9, 30, 0.8)), url(../img/Background-3.jpg);
   background-position: center;
   background-size: cover;
   position: relative; }
-  .hero header {
-    display: flex;
-    align-items: center; }
-    .hero header div a img {
-      height: 75px;
-      margin: 2rem;
-      border-radius: 50%; }
-    .hero header .navlinks {
-      margin: 2rem 2rem 2rem auto; }
-      .hero header .navlinks ul {
-        list-style-type: none;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center; }
-        .hero header .navlinks ul li {
-          margin: 0 .5rem; }
-          .hero header .navlinks ul li a {
-            text-decoration: none;
-            text-transform: uppercase;
-            color: white;
-            font-size: 25px;
-            font-weight: 700; }
-            .hero header .navlinks ul li a:hover {
-              text-decoration: underline hwb(4 21% 4%); }
-  .hero main {
-    width: 90%;
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    text-align: center; }
-    .hero main h1 {
-      font-size: 50px;
-      margin-bottom: 3rem; }
-    .hero main p {
-      font-size: 30px;
-      margin: 0 3rem; }
-    .hero main button {
-      padding: 15px;
-      margin-top: 2rem;
-      background-color: hwb(4 21% 4%);
-      border: 2px solid #114;
-      transition: 0.2s; }
-      .hero main button:hover {
-        border: 2px solid hwb(4 21% 4%); }
-      .hero main button a {
-        font-size: 30px;
-        color: #114;
-        text-decoration: none;
-        text-transform: capitalize;
+  .heroBlog main {
+    color: white; }
+    .heroBlog main .hero_text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      align-items: center; }
+      .heroBlog main .hero_text h1 {
+        font-size: 3rem;
+        margin-bottom: 3rem;
         font-weight: 700; }
-    .hero main img {
-      height: 150px;
-      margin-top: 2rem; }
+      .heroBlog main .hero_text p {
+        font-size: 1.5rem;
+        margin: 0 3rem;
+        font-weight: 400; }
+
+.blogContent {
+  margin-top: 2rem; }
+  .blogContent h2 {
+    font-size: 2rem;
+    padding: 1rem;
+    text-align: center; }
+  .blogContent #carouselR32, .blogContent #carouselR, .blogContent #carouselC63 {
+    margin: 5vh 25vw; }
 
 /*---------footer---------*/
 footer {
@@ -212,77 +327,127 @@ footer {
         height: 60px; }
   footer h3 {
     font-size: 30px;
+    font-weight: 700;
     margin: 15px 0; }
   footer p {
     font-size: 20px;
     text-align: center;
+    font-weight: 400;
     margin: 1rem 0.5rem; }
 
 /*---------media querys--------*/
+@media screen and (min-width: 1440px) {
+  .hero main, .heroServicios main, .heroBlog main, .heroContactos main, .heroShop main {
+    margin-top: 5rem; }
+    .hero main .hero_text, .heroServicios main .hero_text, .heroBlog main .hero_text, .heroContactos main .hero_text, .heroShop main .hero_text {
+      margin: 1rem 1rem; }
+      .hero main .hero_text h1, .heroServicios main .hero_text h1, .heroBlog main .hero_text h1, .heroContactos main .hero_text h1, .heroShop main .hero_text h1 {
+        font-size: 5rem;
+        margin-bottom: 2rem; }
+      .hero main .hero_text p, .heroServicios main .hero_text p, .heroBlog main .hero_text p, .heroContactos main .hero_text p, .heroShop main .hero_text p {
+        font-size: 3rem;
+        margin: 0 2rem; }
+      .hero main .hero_text button, .heroServicios main .hero_text button, .heroBlog main .hero_text button, .heroContactos main .hero_text button, .heroShop main .hero_text button {
+        font-size: 3rem; }
+  .blogContent h2 {
+    font-size: 2.5rem; }
+  .shop div .precio {
+    font-size: 35px; }
+  .shop div .descripcion {
+    font-size: 35px; }
+  .shop div p {
+    font-size: 35px; }
+  .shop div button {
+    height: 60px; }
+  .servicios ul li {
+    font-size: 40px; }
+    .servicios ul li p {
+      font-size: 30px; }
+  .cards div h3 {
+    font-size: 3rem; }
+  .cards div p {
+    font-size: 2rem; }
+  footer .icons div {
+    margin: 0 1rem; }
+    footer .icons div img {
+      width: 75px;
+      height: 75px; }
+  footer .icons h3 {
+    font-size: 35px; }
+  footer .icons p {
+    font-size: 30px; } }
+
+@media screen and (max-width: 1120px) {
+  .mainContainer {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .mainContainer .galleryText {
+      width: 30%;
+      text-align: center; }
+      .mainContainer .galleryText h1 {
+        color: white;
+        font-size: 5rem; }
+    .mainContainer .carouselContainer {
+      width: 55%; } }
+
 @media screen and (max-width: 1000px) {
   .cards {
     flex-direction: column; }
     .cards .card1, .cards .card2, .cards .card3 {
-      margin-bottom: 1rem; }
+      margin-bottom: 1rem;
+      max-width: 100%; }
       .cards .card1 p, .cards .card2 p, .cards .card3 p {
         font-size: 25px;
-        padding: 1rem; } }
+        padding: 1rem; }
+  .blogContent #carouselR32, .blogContent #carouselR, .blogContent #carouselC63 {
+    margin: 5vh 5vw; } }
 
-@media screen and (max-width: 950px) {
-  .hero header .navlinks ul li a {
-    font-size: 23px; } }
+@media screen and (max-width: 992px) {
+  .hero main, .heroServicios main, .heroBlog main, .heroContactos main, .heroShop main {
+    margin-top: 3rem; } }
 
 @media screen and (max-width: 904px) {
   .shop div {
     width: 30%; } }
 
-@media screen and (max-width: 835px) {
-  .hero main {
-    top: 60%; }
-    .hero main .hero_text h1 {
-      font-size: 35px; }
-    .hero main .hero_text p {
-      font-size: 25px; }
-    .hero main .hero_text button a {
-      font-size: 25px; } }
-
 @media screen and (max-width: 769px) {
-  .hero header .navlinks {
-    margin: 0; }
   .cards {
     margin: 4rem 1rem; }
     .cards .card1 h3, .cards .card2 h3, .cards .card3 h3 {
-      font-size: 20px; }
+      font-size: 1.5rem; }
     .cards .card1 p, .cards .card2 p, .cards .card3 p {
-      font-size: 17px; }
+      font-size: 1.2rem; }
   footer .icons div {
     margin: 0 1rem; }
   footer h3 {
     font-size: 25px; } }
 
 @media screen and (max-width: 613px) {
+  .hero main, .heroServicios main, .heroBlog main, .heroContactos main, .heroShop main {
+    margin-top: 2rem; }
+    .hero main .hero_text h1, .heroServicios main .hero_text h1, .heroBlog main .hero_text h1, .heroContactos main .hero_text h1, .heroShop main .hero_text h1 {
+      font-size: 2rem;
+      margin-bottom: .5rem; }
+    .hero main .hero_text p, .heroServicios main .hero_text p, .heroBlog main .hero_text p, .heroContactos main .hero_text p, .heroShop main .hero_text p {
+      font-size: 1.5rem;
+      margin: 0 2rem; }
+    .hero main .hero_text .dealer, .heroServicios main .hero_text .dealer, .heroBlog main .hero_text .dealer, .heroContactos main .hero_text .dealer, .heroShop main .hero_text .dealer {
+      margin-top: 1rem; }
   .shop div {
     width: 65%; } }
 
-@media screen and (max-width: 590px) {
-  .hero main .hero_text h1 {
-    font-size: 35px;
-    margin-bottom: 2rem; }
-  .hero main .hero_text p {
-    font-size: 25px; }
-  .hero main .hero_text button a {
-    font-size: 20px; } }
-
-@media screen and (max-width: 440px) {
-  .hero main .hero_text h1 {
-    margin-bottom: 1.5rem; }
-  .hero main .hero_text p {
-    margin: 0 1rem; }
-  .hero main .hero_text button {
-    margin-top: 1rem; }
-    .hero main .hero_text button a {
-      font-size: 20px; }
-  .hero main .hero_text img {
-    height: 115px; }
-  .servicios ul {
-    margin: .5rem; } }
+@media screen and (max-width: 500px) {
+  .hero main, .heroServicios main, .heroShop main {
+    margin-top: 0; }
+    .hero main .hero_text button, .heroServicios main .hero_text button, .heroShop main .hero_text button {
+      margin-top: 0.4rem; }
+  .heroBlog main, .heroContactos main {
+    margin-top: 4rem; }
+    .heroBlog main .hero_text button, .heroContactos main .hero_text button {
+      margin-top: 1rem; }
+  .blogContent h2 {
+    font-size: 1.5rem; }
+  .ubicacion, .containerFormulario {
+    margin: 1rem; } }
